@@ -24,6 +24,13 @@ defmodule BvoWeb.Router do
     live "/players/:id", PlayerLive.Show, :show
     live "/players/:id/show/edit", PlayerLive.Show, :edit
 
+    live "/teams", TeamLive.Index, :index
+    live "/teams/new", TeamLive.Index, :new
+    live "/teams/:id/edit", TeamLive.Index, :edit
+
+    live "/teams/:id", TeamLive.Show, :show
+    live "/teams/:id/show/edit", TeamLive.Show, :edit
+
     get "/", PageController, :home
   end
 
